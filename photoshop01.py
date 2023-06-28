@@ -1,10 +1,7 @@
 from PIL import Image
-
-#ovo je za promjenu gdje se terminal otvara
 import os
 
-#os.chdir("m3/datoteke/pillow/")
-#NIJE RELEVANTNO ZA PREDAVANJE
+os.system('cls')
 
 fotografija_putanja = r"slika.jpg"
 #fotografija_putanja = r"slika2.jpg"
@@ -29,8 +26,8 @@ yellow_vert = yellow.resize((fotografije_varijabla.size[0] - (yellow_resize_vert
 yellow_resize_horizontal=int(round(fotografije_varijabla.size[1]*0.125,0))
 yellow_hor = yellow.resize((10, fotografije_varijabla.size[1] - (yellow_resize_horizontal * 2)))
 
-odabir=int(50)
-#odabir=int(input('Unesite željeni postotak za micanje ruba slike (cijeli broj bez %): '))
+#odabir=int(50)
+odabir=int(input('Unesite željeni postotak za micanje ruba slike (cijeli broj bez %): '))
 odabir_step= odabir/200
 
 blue_resize_vertical=int(round(fotografije_varijabla.size[0]*odabir_step,0))
@@ -48,10 +45,10 @@ blue_hor = blue.resize((10, fotografije_varijabla.size[1] - (blue_resize_horizon
 #print(f"mod slike conv: {fotografije_varijabla_converted.mode}")
 #print(f"mod slike preko: {red.mode}")
 
-print(red_resize_vertical)
-print(red.size)
-print(red_vert.size)
-print(fotografije_varijabla.size[0])
+#print(red_resize_vertical)
+#print(red.size)
+#print(red_vert.size)
+#print(fotografije_varijabla.size[0])
 
 #blended = Image.blend(fotografije_varijabla_converted, fotografija_preko, alpha=0.5)
 #blended.show()
